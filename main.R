@@ -73,7 +73,7 @@ for(t1 in 1: time){
         }
       }
   
-    Turnover = mean(TR_mat)
+    Turnover = mean(rowSums(TR_mat))
     SR_adj= (mean_mu-0.005*Turnover)/sqrt(sigma)
   
     result[a,1] = t
