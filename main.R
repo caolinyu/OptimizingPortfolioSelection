@@ -1,4 +1,5 @@
 library(MASS)
+#384*20
 datad = read.csv("C:/Users/cly/Desktop/lunwen1/第四次修改/OptimizingPortfolioSelection-main/new_data14-16.csv",header = FALSE) 
 
 time = 10  # Number of repetitions
@@ -8,8 +9,8 @@ for(t1 in 1: time){
   data = datad[,sample(ncol(datad), count)]
   
   dim_mid=dim(data) 
-  n = dim_mid[1]
-  p = dim_mid[2]
+  n = dim_mid[1] #384
+  p = dim_mid[2] #count
 
   w = c(80,90,100,110,120) #Window width
   result = matrix(rep(0,6*length(w)),length(w),6)
